@@ -76,7 +76,7 @@
       gap: 5px;
       cursor: pointer;
       margin-left: auto;
-      margin-right: -200px;
+      margin-right: 20px;
     }
 
     .hamburger div {
@@ -164,26 +164,20 @@
       padding-right: 80px;
     }
 
-    
-  .about-section .about-paragraph {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 700px;
-    text-align: right;
-    margin: 0;
-    padding-left:250px;
-  }
+    .about-section .about-paragraph {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 700px;
+      text-align: right;
+      margin: 0;
+      padding-left:250px;
+    }
 
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 20px;
-    }
-
-    /* Remove extra space between profile and description */
-    .profile h1, .profile h2 {
-      margin-bottom: 10px; /* Reduced the space */
     }
 
     /* Mobile Responsiveness */
@@ -206,9 +200,8 @@
 
       .hamburger {
         display: flex;
-        margin-left: 20px;
-        
-        
+        margin-left: auto;
+        margin-right: 20px;
       }
 
       .nav-links.active {
@@ -220,16 +213,27 @@
         height: 200px;
       }
 
+      /* Update About Section for Mobile */
       .about-section {
-        padding: 0 20px;
+        padding: 20px; /* Reduce padding */
+        height: auto;  /* Allow the section to expand vertically based on content */
+        clip-path: none;  /* Remove the polygon clip-path on mobile */
+        justify-content: center;  /* Center-align content vertically */
+        align-items: center;  /* Center-align content horizontally */
+        text-align: center;  /* Center the text */
       }
 
-      .main-section {
-        animation: fadeIn 2s ease-in-out;
+      .about-section h2 {
+        font-size: 28px;  /* Adjust font size for smaller screens */
+        margin-bottom: 20px;  /* Add some space below the heading */
+        padding-right: 0;  /* Remove the extra right padding */
       }
 
-      .about-section {
-        animation: slideIn 1s ease-in-out;
+      .about-section .about-paragraph {
+        font-size: 14px;  /* Make text smaller for better readability on mobile */
+        padding-left: 0;  /* Remove padding */
+        max-width: 90%;  /* Make text container responsive */
+        margin: 0 auto;  /* Center the paragraph */
       }
     }
   </style>
@@ -286,6 +290,8 @@
   </script>
 </body>
 </html>
+
+  
 
 <style>
     body {
